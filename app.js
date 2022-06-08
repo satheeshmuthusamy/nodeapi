@@ -261,4 +261,4 @@ MongoClient.connect(mongoUrl, (err, client) => {
 //nodemon does not restart in .env file==>it should be restarted file.
 //nodemon does not restart in .env file==>it should be restarted file.
 //nodemon does not restart in .env file==>it should be restarted file.
-//nodemon does not restart in .env file==>it should be restarted
+//nodemon does not restart in .env file==>it should be restart
