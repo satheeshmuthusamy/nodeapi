@@ -1,12 +1,20 @@
 //page 1 for zomato
 >list of cities
 >> (GET)http://localhost:11001/location
+>>(live)https://nodedemoapims.herokuapp.com/location
+
 >list of restaurents
 >> (GET)http://localhost:11001/restaurants
+>>(live)https://nodedemoapims.herokuapp.com/restaurants
+
 >menu basics of city
 >> (GET)http://localhost:11001/restaurants?stateId=1
+>>(live)https://nodedemoapims.herokuapp.com/restaurants?stateId=1
+
 >List of QuickSerach
 >> (GET)http://localhost:11001/mealtype
+>>(live)https://nodedemoapims.herokuapp.com/location
+
 
 //page 2
 >List of restaurents basics of mealType
@@ -21,6 +29,7 @@
 //page 3
 >Details of restaurent
 >> (GET)http://localhost:11001/details/2
+>>(live)https://nodedemoapims.herokuapp.com/restaurants
 >Menu of the restaurent
 >> (GET)http://localhost:11001/menu/4
 
@@ -34,6 +43,7 @@ pass[1,3,4,5]//json file
 //page 5
 >List of order placed
 (GET)http://localhost:11001/orders
+>>(Live)https://nodedemoapims.herokuapp.com/orders
 >list of order placed of perticular user
 (GET)http://localhost:11001/orders?satheeshsathish1234@gmail.com
 >update order status

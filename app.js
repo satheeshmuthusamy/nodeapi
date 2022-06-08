@@ -65,25 +65,28 @@ app.get('/items/:collections', (req, res) => {
 
 app.get('/location', (req, res) => { //multiple routes
     // letkey=req.query.key;
-
-
     db.collection('location').find().toArray((err, result) => {
         if (err) throw err;
         res.send(result)
     })
 })
-app.get('/mealType', (req, res) => {
-        if (auth(req.header('basicauth'))) {
-            db.collection('mealType').find().toArray((err, result) => {
-                if (err) throw err;
-                res.send(result)
-            })
-        } else {
-            res.send('unauthorized calling')
 
-        }
-
+app.get('/mealtype', (req, res) => { //multiple routes
+        // letkey=req.query.key;
+        db.collection('mealtype').find().toArray((err, result) => {
+            if (err) throw err;
+            res.send(result)
+        })
     })
+    // app.get('/mealType', (req, res) => {
+    //         if (auth(req.header('basicauth'))) {
+    //             db.collection('mealType').find().toArray((err, result) => {
+    //                 if (err) throw err;
+    //                 res.send(result)
+    //             })
+    //         } else {
+    //             res.send('unauthorized calling')
+    //  }})
     //to get a required state we can use query params//
 app.get('/restaurants', (req, res) => {
     let stateId = Number(req.query.stateId); //lets pass the state id in url
