@@ -71,9 +71,9 @@ app.get('/location', (req, res) => { //multiple routes
     })
 })
 
-app.get('/mealtype', (req, res) => { //multiple routes
+app.get('/mealype', (req, res) => { //multiple routes
         // letkey=req.query.key;
-        db.collection('mealtype').find().toArray((err, result) => {
+        db.collection('mealType').find().toArray((err, result) => {
             if (err) throw err;
             res.send(result)
         })
