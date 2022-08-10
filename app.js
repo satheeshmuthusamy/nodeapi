@@ -71,7 +71,7 @@ app.get('/location', (req, res) => { //multiple routes
     })
 })
 
-app.get('/mealype', (req, res) => { //multiple routes
+app.get('/mealType', (req, res) => { //multiple routes
         // letkey=req.query.key;
         db.collection('mealType').find().toArray((err, result) => {
             if (err) throw err;
@@ -204,7 +204,7 @@ app.post('/placeOrder', (req, res) => {
 
 app.put('/updateorder/:id', (req, res) => {
     let oid = Number(req.params.id);
-    db.collection('orders').updateOne({ orderId: oid }, {
+    db.collection('orders').updateOne({ id: oid }, {
         $set: {
             "status": req.body.status,
             "bank_name": req.body.bank_name,
